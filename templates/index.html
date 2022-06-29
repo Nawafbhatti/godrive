@@ -1,0 +1,167 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <h4 class="mt-5 mb-3">Files</h4>
+        <div class="d-flex gap-1 justify-content-between flex-wrap align-items-center">
+            <!-- Folder -->
+            <div class="card" data-bs-toggle="modal" data-bs-target="#folderModal"
+                style="width: 15rem; cursor: pointer;">
+                <img src="{% static '/images/picfile.jpeg' %}"
+                class="card-img-top" width="50px" height="200px" alt="...">
+                <div class="card-body border bg-light">
+                    <h5 class="card-title">
+                        <!-- <i class="fa-solid fa-folder"></i> -->
+                        <i class="fa-solid fa-folder" style="color: rgb(7, 113, 212)"></i>
+                        Card title
+                    </h5>
+                    <p class="card-text">
+                        Some quick example text
+                    </p>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="card" style="width: 15rem; cursor: pointer;">
+                <img src="{% static '/images/pic1.jpeg' %}" class="card-img-top" width="50px" height="200px" alt="">
+                <div class="card-body border bg-light">
+                    <h5 class="card-title">
+                        <!-- <i class="fa-solid fa-folder"></i> -->
+                        <i class="fa-solid fa-image" style="color: rgb(7, 113, 212)"></i>
+                        Card title
+                    </h5>
+                    <p class="card-text">
+                        Some quick example text
+                    </p>
+                </div>
+            </div>
+
+            <!-- File -->
+            <div class="card" style="width: 15rem; cursor: pointer;">
+                <img src="{% static '/images/picfile.jpeg' %}" class="card-img-top" width="50px" height="200px" alt="...">
+                <div class="card-body border bg-light">
+                    <h5 class="card-title">
+                        <!-- <i class="fa-solid fa-folder"></i> -->
+                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                        Card title
+                    </h5>
+                    <p class="card-text">
+                        Some quick example text
+                    </p>
+                </div>
+            </div>
+            <!-- Others -->
+            <div class="card" style="width: 15rem; cursor: pointer;">
+                <img src="{% static '/images/pic2.jpeg' %}" class="card-img-top" width="50px" height="200px" alt="">
+                <div class="card-body border bg-light">
+                    <h5 class="card-title">
+                        <!-- <i class="fa-solid fa-folder"></i> -->
+                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                        Card title
+                    </h5>
+                    <p class="card-text">
+                        Some quick example text
+                    </p>
+                </div>
+            </div>
+            <!-- Others -->
+            <div class="card" style="width: 15rem; cursor: pointer;">
+                <img src="{% static '/images/pic1.jpeg' %}" class="card-img-top" width="50px" height="200px" alt="">
+                <div class="card-body border bg-light">
+                    <h5 class="card-title">
+                        <!-- <i class="fa-solid fa-folder"></i> -->
+                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                        Card title
+                    </h5>
+                    <p class="card-text">
+                        Some quick example text
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade " id="folderModal" tabindex="-1" aria-labelledby="folderModal" aria-hidden="true">
+                <div class="modal-dialog modal-xl modal-dialog-centered justify-content-center modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex gap-3 flex-wrap justify-content-center">
+                            <div>
+                                <!-- Condition here to hide spinner -->
+                                <div class="spinner-border" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                            <!-- <div class="card" style="width: 10rem; cursor: pointer;">
+                                <img src="./bg-img.png" class="card-img-top" width="50px" height="150px" alt="">
+                                <div class="card-body border bg-light">
+                                    <h5 class="card-title"> 
+                                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                                        Card title
+                                    </h5>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 10rem; cursor: pointer;">
+                                <img src="./bg-img.png" class="card-img-top" width="50px" height="150px" alt="">
+                                <div class="card-body border bg-light">
+                                    <h5 class="card-title"> 
+                                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                                        Card title
+                                    </h5>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 10rem; cursor: pointer;">
+                                <img src="./bg-img.png" class="card-img-top" width="50px" height="150px" alt="">
+                                <div class="card-body border bg-light">
+                                    <h5 class="card-title"> 
+                                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                                        Card title
+                                    </h5>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 10rem; cursor: pointer;">
+                                <img src="./bg-img.png" class="card-img-top" width="50px" height="150px" alt="">
+                                <div class="card-body border bg-light">
+                                    <h5 class="card-title"> 
+                                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                                        Card title
+                                    </h5>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 10rem; cursor: pointer;">
+                                <img src="./bg-img.png" class="card-img-top" width="50px" height="150px" alt="">
+                                <div class="card-body border bg-light">
+                                    <h5 class="card-title"> 
+                                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                                        Card title
+                                    </h5>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 10rem; cursor: pointer;">
+                                <img src="./bg-img.png" class="card-img-top" width="50px" height="150px" alt="">
+                                <div class="card-body border bg-light">
+                                    <h5 class="card-title"> 
+                                        <i class="fa-solid fa-file" style="color: rgb(7, 113, 212)"></i>
+                                        Card title
+                                    </h5>
+
+                                </div>
+                            </div> -->
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
